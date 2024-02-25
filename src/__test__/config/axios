@@ -1,0 +1,49 @@
+// import axios from 'axios';
+// import { fetchApi } from '@/config/axios'
+// import { method } from '@/type/axiosmethod';
+// import { apiBaseUrl, apiKey } from '@/lib/constant';
+
+// jest.mock('axios');
+
+// const axiosSpy = jest.spyOn(axios, 'request');
+
+// describe('fetchApi function', () => {
+//   afterEach(() => {
+//     jest.clearAllMocks(); 
+//   });
+
+//   test('should fetch data from API with correct parameters', async () => {
+
+//     const method:method = 'get';
+//     const endpoint = '/example-endpoint';
+//     const headers = { 'Content-Type': 'application/json' };
+//     const data = { param1: 'value1', param2: 'value2' };
+//     const expectedResult = { data: 'mocked response' };
+
+//     axiosSpy.mockResolvedValue(expectedResult);
+
+//     const response = await fetchApi(method, endpoint, headers, data);
+
+//     expect(axiosSpy).toHaveBeenCalledWith({
+//       method: method,
+//       url: `${apiBaseUrl}${endpoint}&apiKey=${apiKey}`,
+//       headers: {
+//         ...headers,
+//       },
+//       data: data,
+//     });
+//     expect(response).toEqual(expectedResult);
+//   });
+
+//   test('should throw error when API call fails', async () => {
+//     const method:method = 'get';
+//     const endpoint = '/example-endpoint';
+//     const headers = { 'Content-Type': 'application/json' };
+//     const data = { param1: 'value1', param2: 'value2' };
+//     const expectedError = new Error('Mocked error message');
+
+//     axiosSpy.mockRejectedValue(expectedError);
+
+//     await expect(fetchApi(method, endpoint, headers, data)).rejects.toThrow(expectedError);
+//   });
+// });
